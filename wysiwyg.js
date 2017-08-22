@@ -41,6 +41,19 @@ var famousPeopleArray = [
 ];
 
 
+var personContainer = document.getElementById('container');
+
+for (var i = 0; i < famousPeopleArray.length; i++){
+	var personString = famousPeopleArray[i];
+	var domString = "";
+
+	domString += `<header>${personString.name}, ${personString.title}</header>`;
+	domString += `<section><img src="${personString.image}" width="200"></section>`;
+	domString += `<footer>${famousPeopleArray[i].lifespan.birth}, ${famousPeopleArray[i].lifespan.death}</footer>`;
+
+
+	personContainer.innerHTML += domString;
+}
 
 
 
