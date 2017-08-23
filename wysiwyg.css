@@ -1,0 +1,63 @@
+h1, h2, h4 {
+	text-align: center;
+}
+
+#textBoxContainer > div {
+	margin:0 auto;
+}
+
+.commentBox {
+    width:400px;
+    height:50px;
+    color:White;
+    margin:0 auto;
+    text-align:center; /* I added this extra proeprty*/
+}
+
+#container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+#personContainerDiv {
+	margin: 15px;
+	border: solid 1px black;
+	width: 230px;
+}
+
+/*#famousPersonImage {
+	margin: 0px auto;
+}*/
+
+img {
+	margin: 0px auto;
+	height: 300px;
+}
+
+.yellowBG {
+	background-color: yellow;
+}
+
+.lightBlueBG {
+	background-color: lightblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
