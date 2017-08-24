@@ -47,12 +47,11 @@ for (var i = 0; i < famousPeopleArray.length; i++){
 	var personString = famousPeopleArray[i];
 	var domString = "";
 
-	// domString += `<header>${personString.name}, ${personString.title}</header>`;
-	domString += `<div id="personContainerDiv">`;
-	domString +=   `<h2 class="lightBlueBG">${personString.name}</h2>`;
-	domString +=   `<h4 class="yellowBG">${personString.title}</h4>`;
-	domString +=   `<section class="lightBlueBG" id="famousPersonImage"><img src="${personString.image}"></section>`;
-	domString +=   `<footer class="yellowBG">${famousPeopleArray[i].lifespan.birth}, ${famousPeopleArray[i].lifespan.death}</footer>`;
+	domString += `<div class="personContainerDiv" id="personContainerDiv">`;
+	domString +=   `<h2 class="lightBlueBG child">${personString.name}</h2>`;
+	domString +=   `<h4 class="yellowBG child">${personString.title}</h4>`;
+	domString +=   `<section class="lightBlueBG child" id="famousPersonImage"><img src="${personString.image}"></section>`;
+	domString +=   `<footer class="yellowBG child">${famousPeopleArray[i].lifespan.birth}, ${famousPeopleArray[i].lifespan.death}</footer>`;
 	domString += `</div>`;
 
 
@@ -60,12 +59,25 @@ for (var i = 0; i < famousPeopleArray.length; i++){
 }
 
 
+var selectedFamousPerson;
+
+document.getElementById("container").addEventListener("click", function(event){
+	addDottedBorder(event);
+});
 
 
+function addDottedBorder(event) {
+  if (event.target.classList.contains("child")){
+    selectedFamousPerson = event.target.parentNode;
+  } else if (event.target.parentNode.parentNode.classList.contains("personContainerDiv")){
+    selectedFamousPerson = event.target.parentNode.parentNode;
+  } else if (event.target.classList.contains("personContainerDiv")){
+    selectedFamousPerson = event.target;
+  }
 
+  selectedFamousPerson.classList.add("border-when-selected");
 
-
-
+}
 
 
 

@@ -23,7 +23,6 @@ h1, h2, h4 {
 
 #personContainerDiv {
 	margin: 15px;
-	border: solid 1px black;
 	width: 230px;
 }
 
@@ -44,7 +43,9 @@ img {
 	background-color: lightblue;
 }
 
-
+.border-when-selected {
+	border: dotted 4px red;
+}
 
 
 
